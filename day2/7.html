@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        
+    <form action="http://localhost:3000/dopost" method="post" enctype="multipart/form-data">
+        用户<input type="text" name="username" >
+        密码<input type="text" name="pass" >
+        文件
+        <div class="div1" style="width: 300px; height: 200px;border: 1px solid black;"><input class="input1" type="file" name="pic" ></div>
+        <input type="submit" value="提交">
+    </form>
+
+    <!-- enctype="multipart/form-data"----传输文件时需要 -->
+</body>
+<script src="../jquery-3.2.1.min.js"></script>
+<script>
+    $(function(){
+        $(".div1").click(function(){
+            $(".input1")[0].click()
+        })
+    })
+</script>
+</html>
